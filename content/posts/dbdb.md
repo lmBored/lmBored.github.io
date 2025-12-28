@@ -1,5 +1,5 @@
 ---
-title: Deutsche Bahn: Journey of Tears and Pain
+title: "Deutsche Bahn: Journey of Tears and Pain"
 date: 26-12-2025
 slug: deutsche-bahn-journey-of-tear-and-pain
 summary: Why db is db
@@ -10,7 +10,6 @@ tags:
 featured: true
 category: Holiday experience
 ---
-
 # Status
 
 Work in progress
