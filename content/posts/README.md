@@ -42,7 +42,7 @@ So do **bold**, *italic*, and `code`.
 | `author` | Author name | Site owner |
 | `category` | Post category (e.g. Tutorial, Note, Review) | Article |
 | `tags` | List of tags | None |
-| `cover` | Cover image filename | None |
+| `cover` | Cover image filename (not implemented, yet) | None |
 | `updated` | Last updated date | None |
 | `draft` | Hide from listing | `false` |
 | `featured` | Pin to top of list | `false` |

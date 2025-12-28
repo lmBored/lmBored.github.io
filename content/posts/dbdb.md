@@ -3,17 +3,19 @@ title: Deutsche Bahn: Journey of Tears and Pain
 date: 26-12-2025
 slug: deutsche-bahn-journey-of-tear-and-pain
 summary: Why db is db
-author: lmbored
+author: me
 tags:
   - db
   - rant
 featured: true
-category: Experience
+category: Holiday experience
 ---
 
-# Work in progress
+# Status
 
-TBD
+Work in progress
+
+![Deutsche Bahn](./assets/db.jpg)
 
 # Rants summary
 

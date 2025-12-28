@@ -50,6 +50,7 @@ const allPosts: BlogPost[] = Object.entries(postModules)
       tags: frontmatter.tags,
       draft: frontmatter.draft,
       featured: frontmatter.featured,
+      // TODO: This doesnt work, it looks ugly just appending the image
       cover: frontmatter.cover ? assetUrls[frontmatter.cover] : undefined,
       updated: frontmatter.updated,
       readTime,

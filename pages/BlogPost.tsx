@@ -30,9 +30,8 @@ export const BlogPost: React.FC = () => {
             <span className="post-category">{post.category || 'Article'}</span>
             <div className="post-date-author">
               <span className="post-date">{post.date}</span>
-              {post.author && (
-                <span className="post-author"> by {post.author}</span>
-              )}
+              {/* Only renders when post.author exists */}
+              {post.author && (<span className="post-author"> by {post.author}</span>)} 
             </div>
           </div>
 
