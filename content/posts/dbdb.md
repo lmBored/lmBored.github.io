@@ -5,8 +5,8 @@ slug: deutsche-bahn-journey-of-tear-and-pain
 summary: Why db is db
 author: me
 tags:
-  - db
-  - rant
+  - Germany
+  - Deutsche Bahn
 featured: true
 category: Holiday experience
 ---
