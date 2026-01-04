@@ -18,6 +18,15 @@ Object.entries(assetModules).forEach(([path, url]) => {
   assetUrls[filename] = url;
 });
 
+const parseDate = (dateStr: string) => {
+  const parts = dateStr.split('-');
+  if (parts.length === 3 && parts[0].length !== 4) {
+    const [d, m, y] = parts.map(Number);
+    return new Date(y, m - 1, d).getTime();
+  }
+  return new Date(dateStr).getTime();
+};
+
 // export function getAssetUrl(filename: string): string | undefined {
 //   return assetUrls[filename];
 // }
@@ -65,7 +74,7 @@ export function getPublishedPosts(): BlogPost[] {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
       // Then by date
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
+      return parseDate(b.date) - parseDate(a.date);
     });
 }
 
