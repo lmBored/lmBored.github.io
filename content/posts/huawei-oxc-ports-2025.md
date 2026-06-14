@@ -1,7 +1,7 @@
 ---
-title: "Huawei 2025 OXC Ports Arrangement: A Technical Deep-Dive"
-date: 2026-06-14
-slug: huawei-oxc-ports-2025-deep-dive
+title: "Technical Write-up for Huawei 2025 OXC Ports Arrangement"
+date: 01-01-2026
+slug: icpc-adhoc-2026
 summary: Breaking down the algorithms that secured rank 64 out of 3176 in the Huawei 2025 competition, contrasting Greedy with Stochastic Local Search.
 author: me
 tags:

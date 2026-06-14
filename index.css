@@ -156,6 +156,13 @@ code {
   flex: 1;
 }
 
+.blog-post-page .post-article.card {
+  width: 100vw;
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 
 
 
@@ -904,6 +911,12 @@ code {
 
   .post-title {
     font-size: 1.4rem;
+  }
+
+  .blog-post-page .post-article.card {
+    margin-left: 0;
+    transform: none;
+    width: 100%;
   }
 }
 

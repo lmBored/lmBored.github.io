@@ -4,6 +4,9 @@ import { Card } from '../components/Card';
 import { getPostBySlug } from '../content/index';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 
 export const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -19,7 +22,7 @@ export const BlogPost: React.FC = () => {
   }
 
   return (
-    <div className="fade-in">
+    <div className="fade-in blog-post-page">
       <Link to="/blog" className="post-back">
         <ArrowLeft size={18} /> Back to blog
       </Link>
@@ -49,6 +52,8 @@ export const BlogPost: React.FC = () => {
         <div className="post-content">
           <ReactMarkdown
             className="prose"
+            remarkPlugins={[remarkMath]}
+            rehypePlugins={[rehypeKatex]}
             components={{
               h1: ({ children }) => <h1>{children}</h1>,
               h2: ({ children }) => <h2>{children}</h2>,
