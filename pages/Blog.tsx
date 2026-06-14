@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { BlogPost } from '../types';
 import { getPublishedPosts } from '../content/index';
 
-export const Blog: React.FC = () => {
+const Blog: React.FC = () => {
   const posts: BlogPost[] = getPublishedPosts();
 
   return (
@@ -42,3 +42,5 @@ export const Blog: React.FC = () => {
     </div>
   );
 };
+
+export default Blog;

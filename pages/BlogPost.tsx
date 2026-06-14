@@ -1,24 +1,23 @@
-import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { Card } from '../components/Card';
 import { getPostBySlug } from '../content/index';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css';
 
-export const BlogPost: React.FC = () => {
+const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
+
+  useEffect(() => {
+    import('katex/dist/katex.min.css');
+  }, []);
+
   const post = id ? getPostBySlug(id) : undefined;
 
   if (!post) {
-    // Redirect to blog if post not found
-    React.useEffect(() => {
-      navigate('/blog');
-    }, [navigate]);
-    return <div className="loading">Loading...</div>;
+    return <Navigate to="/blog" replace />;
   }
 
   return (
@@ -86,3 +85,5 @@ export const BlogPost: React.FC = () => {
     </div>
   );
 };
+
+export default BlogPost;

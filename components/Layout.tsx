@@ -12,7 +12,9 @@ export const Layout: React.FC = () => {
         <Nav />
 
         <main className="main fade-in">
-          <Outlet />
+          <React.Suspense fallback={<div className="loading">Loading...</div>}>
+            <Outlet />
+          </React.Suspense>
         </main>
       </div>
 
