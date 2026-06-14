@@ -11,7 +11,7 @@ const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
-    import('katex/dist/katex.min.css');
+    import('katex/dist/katex.min.css').catch(() => {});
   }, []);
 
   const post = id ? getPostBySlug(id) : undefined;

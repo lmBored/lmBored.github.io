@@ -16,6 +16,23 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks(id: string) {
+              if (
+                id.includes('node_modules/react-dom') ||
+                id.includes('node_modules/react/') ||
+                id.includes('node_modules/react-router') ||
+                id.includes('node_modules/scheduler') ||
+                id.includes('node_modules/@remix-run')
+              ) {
+                return 'vendor';
+              }
+            }
+          }
+        }
       }
     };
 });
