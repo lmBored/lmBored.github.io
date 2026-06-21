@@ -1,5 +1,5 @@
 ---
-title: "Technical Write-up for Huawei 2025 OXC Ports Arrangement"
+title: "Technical Write-up for ICPC 2025 Online Winter Challenge: OXC Ports Arrangement"
 date: 01-01-2026
 slug: icpc-adhoc-2026
 summary: Breaking down the algorithms that secured rank 64 out of 3176 in the Huawei 2025 competition, contrasting Greedy with Stochastic Local Search.
@@ -11,7 +11,7 @@ tags:
 featured: true
 ---
 
-# The Huawei 2025 OXC Ports Arrangement
+# OXC Ports Arrangement (powered by Huawei 2025)
 
 Participating in the Huawei 2025 competition "OXC Ports Arrangement" on Codeforces was a grueling yet rewarding experience. Out of *3176 participants*, I managed to secure **Rank 64**. 
 
