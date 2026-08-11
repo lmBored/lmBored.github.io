@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
       <div className="post-list">
         {posts.map((post) => (
           <div key={post.slug} className="post-item">
-            <Link to={`/blog/${post.slug}`} className="post-title">{post.title}</Link>
+            <Link to={`/blog/${post.slug}`} className="post-title">{post.title}</Link>{' '}
             <span className="post-date">({post.date})</span>
           </div>
         ))}
