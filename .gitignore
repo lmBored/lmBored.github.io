@@ -24,3 +24,6 @@ index.html.artifact.json
 *.sln
 *.sw?
 
+
+# Playwright MCP artifacts
+.playwright-mcp/

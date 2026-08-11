@@ -1,5 +1,5 @@
 {
-  "name": "neo-brutalist-portfolio-&-blog",
+  "name": "lmBored.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "katex": "^0.17.0",
-    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-markdown": "9.0.1",

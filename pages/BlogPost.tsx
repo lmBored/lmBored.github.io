@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Card } from '../components/Card';
 import { getPostBySlug } from '../content/index';
-import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -21,67 +19,28 @@ const BlogPost: React.FC = () => {
   }
 
   return (
-    <div className="fade-in blog-post-page">
-      <Link to="/blog" className="post-back">
-        <ArrowLeft size={18} /> Back to blog
-      </Link>
+    <div className="blog-post-page">
+      <p className="post-back">
+        <Link to="/blog">← Back to blog</Link>
+      </p>
 
-      <Card className="post-article">
-        <div className="post-header">
-          <div className="post-meta">
-            <span className="post-category">{post.category || 'Article'}</span>
-            <div className="post-date-author">
-              <span className="post-date">{post.date}</span>
-              {/* Only renders when post.author exists */}
-              {post.author && (<span className="post-author"> by {post.author}</span>)} 
-            </div>
-          </div>
+      <div className="post-header">
+        <h1 className="post-title">{post.title}</h1>
+        <p className="post-date">
+          {post.date}
+          {post.author && <> · by {post.author}</>}
+        </p>
+      </div>
 
-          <h1 className="post-title">{post.title}</h1>
-
-          {post.tags && post.tags.length > 0 && (
-            <div className="post-tags">
-              {post.tags.map(tag => (
-                <span key={tag} className="post-tag">{tag}</span>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="post-content">
-          <ReactMarkdown
-            className="prose"
-            remarkPlugins={[remarkMath]}
-            rehypePlugins={[rehypeKatex]}
-            components={{
-              h1: ({ children }) => <h1>{children}</h1>,
-              h2: ({ children }) => <h2>{children}</h2>,
-              h3: ({ children }) => <h3>{children}</h3>,
-              p: ({ children }) => <p>{children}</p>,
-              ul: ({ children }) => <ul>{children}</ul>,
-              ol: ({ children }) => <ol>{children}</ol>,
-              li: ({ children }) => <li>{children}</li>,
-              blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-              code: ({ className, children }) => {
-                const isBlock = String(children).includes('\n');
-                return isBlock
-                  ? <pre><code>{children}</code></pre>
-                  : <code>{children}</code>;
-              },
-              a: ({ href, children }) => <a href={href}>{children}</a>,
-              img: ({ src, alt }) => <img src={src} alt={alt} />,
-              strong: ({ children }) => <strong>{children}</strong>,
-              em: ({ children }) => <em>{children}</em>,
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </div>
-
-        <div className="post-footer">
-          EOF
-        </div>
-      </Card>
+      <div className="post-content">
+        <ReactMarkdown
+          className="prose"
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+        >
+          {post.content}
+        </ReactMarkdown>
+      </div>
     </div>
   );
 };
